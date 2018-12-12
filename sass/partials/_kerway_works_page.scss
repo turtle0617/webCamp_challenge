@@ -1,0 +1,307 @@
+@import "modules/_mediaquery";
+@import "modules/_font";
+
+#kerway_works_page{
+	background-color: #000;
+	position: relative;
+
+	.works_main_content{
+		padding-top: 65px;
+		
+		@include media_laptop{
+			width: 70%;
+		}
+	}
+
+	.container{
+		max-width: 1250px;
+		padding-right: 100px;
+		padding-left: 100px;
+		
+	}
+	.kerway-logo{
+		max-width: 195px;
+		margin: 0 auto 175px;
+		padding-top: 50px;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+
+
+// .grids-layout {
+// 	display: grid;
+//     // grid-template-columns: repeat(auto-fill, minmax(min-content, 350px));
+//     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+//     grid-gap: 50px;
+//     grid-auto-rows: minmax(233px, auto);
+//     grid-auto-flow: row dense;
+//     justify-content: center;
+	// @include media_pc_max {
+	// 	grid-template-columns: repeat(2, minmax(350px, 1fr));
+	// }
+
+	// @include media_ipad_max {
+	// 	grid-template-columns: 350px;
+	// }
+	
+	// .span-h2{
+	//   grid-row-end: span 2;
+	// }
+
+	// .span-w2{
+	//   grid-column-end: span 2;
+
+	//  //  	@include media_ipad_max {
+	// 	// 	grid-column-end: none;
+	// 	// }
+	// }
+
+	// .grid-split{
+	//   	display: inline-grid;
+	//  	grid-template-columns:1fr 1fr;
+	//   	box-sizing: border-box;
+	//   	grid-column-gap: 10px;
+	// 	overflow: hidden;
+	// 	max-height: 233.33px;
+	//     img{
+	//     	width: 100%;
+	//     	display: block;
+	//     }
+	// }
+		
+    // .grid-item {
+    // 	background-position: center;
+    // 	background-repeat: no-repeat;
+    // 	background-size: cover;
+
+    // 	>img{
+	   //  	width: 100%;
+	   //  	object-fit: cover;
+	   //  	}
+		
+		// &-1{
+		// 	background-image: url(../images/kerway/Y4734miu.jpg);
+		// }
+
+		// &-2{
+		// 	background-image: url(../images/kerway/_MG_6715_mina.jpg);
+		// }
+
+		// &-3{
+		// 	background-image: url(../images/kerway/Y6184melody.jpg);
+		// }
+
+		// &-4{
+		// 	background-image: url(../images/kerway/Y2240mina.jpg);
+		// }
+
+		// &-5{
+		// 	background-image: url(../images/kerway/Y4734miu.jpg);
+		// }
+
+		// &-6{
+		// 	background-image: url(../images/kerway/Y6040melody.jpg);
+		// }
+
+		// &-7{
+		// 	background-image: url(../images/kerway/Y6078melody.jpg);
+		// 	// @include media_ipad_max {
+		// 	// 	max-width: 350px;
+		// 	// }
+		// }
+
+		// &-8{
+		// 	background-image: url(../images/kerway/Y2240mina.jpg);
+		// }
+
+		// &-9{
+		// 	background-image: url(../images/kerway/Y2240mina.jpg);
+		// }
+
+		// &-10{
+		// 	background-image: url(../images/kerway/_MG_2209_momo.jpg);
+		// }
+
+		// &-11{
+		// 	background-image: url(../images/kerway/_MG_6841_1_melody.jpg);
+		// }
+
+		// &-12{
+		// 	background-image: url(../images/kerway/Y2240mina.jpg);
+		// }
+
+		// &-13{
+		// 	background-image: url(../images/kerway/Y6078melody.jpg);
+		// 	// @include media_ipad_max {
+		// 	// 	max-width: 350px;
+		// 	// }	
+		// }
+
+		// &-14{
+		// 	background-image: url(../images/kerway/_MG_6841_1_melody.jpg);
+		// }
+
+		// &-15{
+		// 	background-image: url(../images/kerway/Y2240mina.jpg);
+		// }
+
+		// &-16{
+		// 	background-image: url(../images/kerway/_MG_6841_1_melody.jpg);
+		// }
+
+		// &-17{
+		// 	background-image: url(../images/kerway/Y2240mina.jpg);
+		// }
+
+		// &-18{
+		// 	background-image: url(../images/kerway/Y2240mina.jpg);
+		// }
+
+		// &-19{
+		// 	background-image: url(../images/kerway/_MG_2209_momo.jpg);
+		// }
+
+		// &-20{
+		// 	background-image: url(../images/kerway/_MG_2209_momo.jpg);
+		// }   
+// 	}
+// }
+
+
+
+// .grid::after{
+// 	content: "";
+// 	display: block;
+// 	clear: both;
+// }
+
+// .grid-item{
+// 	width: 350px;
+// 	height: 233px;
+// 	float: left;
+// 	overflow: hidden;
+// }
+
+// .span-h2{
+// 	height: 516px;
+// }
+
+// .span-w2{
+// 	width: 750px;
+// }
+
+// .grid{
+// 	max-width: 1150px;
+// 	background: #fff;
+// 	&::after{
+// 		content: "";
+// 		display: block;
+// 		clear: both;
+// 	}
+// }
+
+// .grid-item{
+// 	width: 15.21%;
+// 	max-height: 233px;
+// 	margin-bottom: 50px;
+// 	float: left;
+// 	img{
+// 		width: 100%;
+// 	}
+
+// }
+
+// .grid-item-width2{
+// 	width: 30.43%;
+// 	max-width: 350px;
+// }
+
+// .grid-item-width4{
+// 	width: 65.21%;
+// 	max-width: 750px;
+// }
+
+// .grid-item-height2{	
+// 	max-width: 516px;
+// }
+.masonry{
+	column-count: 2;
+	column-gap: 50px;
+}
+
+.grid-item{
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 50px;
+	img{
+		width: 100%;
+	}
+}
+
+
+.works_title{
+	position: absolute;
+	left: 50px;
+	top: 177.7px;
+	.white_line{
+		width: 150px;
+		height: 16px;
+		background-color: #fff;
+		margin-bottom: 30px;
+	}
+
+	h3{
+		font-family: $font_family_open_sans;
+		font-weight: bold;
+		font-size: 40px;
+		letter-spacing: 4px;
+		color: #fff;
+		padding-bottom: 30px;
+	}
+
+	h4{
+		font-family: $font_family_noto_sans;
+		font-weight: bold;
+		font-size: 32px;
+		letter-spacing: 4px;
+		color: #fff;
+	}
+}
+
+.kerway_works_page_footer{
+	background-color: #fff;
+	height: 245px;
+	display: flex;
+
+		.address{
+			font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+			letter-spacing: 1px;
+			font-size: 13px;
+		}
+
+		.email, .phone{
+			font-family: $font_family_noto_sans;
+			font-weight: 100;
+			font-size: 13px;
+			letter-spacing: 1px;
+			line-height: 15px;
+		}
+	
+	.footer_logo_kerway{
+		padding-top: 75px;
+		text-align: right;
+		img{
+			width: 318px;
+			height: 50px;
+		}
+	}
+	.copyright_kerway{
+		font-family: $font_family_open_sans;
+		font-weight: 100;
+		letter-spacing: 1px;
+	}
+}
+

@@ -1,0 +1,304 @@
+/* line 1, ../sass/modules/_reset.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, ../sass/modules/_reset.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 10, ../sass/modules/_reset.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 13, ../sass/modules/_reset.scss */
+ul li {
+  list-style: none;
+}
+
+/* line 18, ../sass/modules/_reset.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 22, ../sass/modules/_reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+/* line 27, ../sass/modules/_reset.scss */
+p {
+  margin: 0;
+}
+
+/* line 31, ../sass/modules/_reset.scss */
+button {
+  border-style: none;
+}
+
+/* line 35, ../sass/modules/_reset.scss */
+select {
+  border: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* line 41, ../sass/modules/_reset.scss */
+select::-ms-expand {
+  display: none;
+}
+
+/* line 5, ../sass/partials/_contact-form.scss */
+.contact_form {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/hausenncamp/contact_background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+}
+/* line 14, ../sass/partials/_contact-form.scss */
+.contact_form_title {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  text-align: center;
+  letter-spacing: 8px;
+  font-family: "Open Sans", sans-serif;
+}
+/* line 21, ../sass/partials/_contact-form.scss */
+.contact_form_title h1 {
+  font-weight: bold;
+  font-size: 25px;
+}
+/* line 26, ../sass/partials/_contact-form.scss */
+.contact_form_title h2 {
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+/* line 34, ../sass/partials/_contact-form.scss */
+form {
+  display: flex;
+}
+/* line 37, ../sass/partials/_contact-form.scss */
+form .form_column {
+  width: 50%;
+  max-width: 460px;
+}
+/* line 42, ../sass/partials/_contact-form.scss */
+form label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding-top: 35px;
+  padding-bottom: 13px;
+  display: block;
+}
+/* line 50, ../sass/partials/_contact-form.scss */
+form select {
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+/* line 57, ../sass/partials/_contact-form.scss */
+form input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+/* line 63, ../sass/partials/_contact-form.scss */
+form textarea {
+  background-color: transparent;
+  width: 100%;
+  height: 190px;
+  resize: none;
+}
+/* line 70, ../sass/partials/_contact-form.scss */
+form button {
+  font-size: 14px;
+  width: 140px;
+  padding: 8px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* line 81, ../sass/partials/_contact-form.scss */
+.form_title {
+  position: relative;
+}
+/* line 83, ../sass/partials/_contact-form.scss */
+.form_title select {
+  width: 156px;
+}
+/* line 86, ../sass/partials/_contact-form.scss */
+.form_title .arrow_down {
+  position: absolute;
+  bottom: 7px;
+  left: 145px;
+  width: 7px;
+  height: 7px;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* line 91, ../sass/partials/_contact-form.scss */
+.form_subject {
+  position: relative;
+}
+/* line 93, ../sass/partials/_contact-form.scss */
+.form_subject select {
+  width: 195px;
+}
+/* line 96, ../sass/partials/_contact-form.scss */
+.form_subject .arrow_down {
+  position: absolute;
+  bottom: 7px;
+  left: 186px;
+  width: 7px;
+  height: 7px;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* line 102, ../sass/partials/_contact-form.scss */
+.form_last_name, .form_first_name {
+  display: inline-block;
+}
+
+/* line 1, ../sass/partials/_menu-page.scss */
+.menu_page {
+  width: 375px;
+  height: 667px;
+  background-color: #000;
+}
+
+/* line 4, ../sass/partials/_kerway_works_page.scss */
+#kerway_works_page {
+  background-color: #000;
+  position: relative;
+}
+/* line 8, ../sass/partials/_kerway_works_page.scss */
+#kerway_works_page .works_main_content {
+  padding-top: 65px;
+}
+@media all and (min-width: 960px) {
+  /* line 8, ../sass/partials/_kerway_works_page.scss */
+  #kerway_works_page .works_main_content {
+    width: 70%;
+  }
+}
+/* line 16, ../sass/partials/_kerway_works_page.scss */
+#kerway_works_page .container {
+  max-width: 1250px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+/* line 22, ../sass/partials/_kerway_works_page.scss */
+#kerway_works_page .kerway-logo {
+  max-width: 195px;
+  margin: 0 auto 175px;
+  padding-top: 50px;
+}
+/* line 26, ../sass/partials/_kerway_works_page.scss */
+#kerway_works_page .kerway-logo img {
+  width: 100%;
+}
+
+/* line 230, ../sass/partials/_kerway_works_page.scss */
+.masonry {
+  column-count: 2;
+  column-gap: 50px;
+}
+
+/* line 235, ../sass/partials/_kerway_works_page.scss */
+.grid-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 50px;
+}
+/* line 239, ../sass/partials/_kerway_works_page.scss */
+.grid-item img {
+  width: 100%;
+}
+
+/* line 245, ../sass/partials/_kerway_works_page.scss */
+.works_title {
+  position: absolute;
+  left: 50px;
+  top: 177.7px;
+}
+/* line 249, ../sass/partials/_kerway_works_page.scss */
+.works_title .white_line {
+  width: 150px;
+  height: 16px;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+/* line 256, ../sass/partials/_kerway_works_page.scss */
+.works_title h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 4px;
+  color: #fff;
+  padding-bottom: 30px;
+}
+/* line 265, ../sass/partials/_kerway_works_page.scss */
+.works_title h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 4px;
+  color: #fff;
+}
+
+/* line 274, ../sass/partials/_kerway_works_page.scss */
+.kerway_works_page_footer {
+  background-color: #fff;
+  height: 245px;
+  display: flex;
+}
+/* line 279, ../sass/partials/_kerway_works_page.scss */
+.kerway_works_page_footer .address {
+  font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+/* line 285, ../sass/partials/_kerway_works_page.scss */
+.kerway_works_page_footer .email, .kerway_works_page_footer .phone {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 100;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 15px;
+}
+/* line 293, ../sass/partials/_kerway_works_page.scss */
+.kerway_works_page_footer .footer_logo_kerway {
+  padding-top: 75px;
+  text-align: right;
+}
+/* line 296, ../sass/partials/_kerway_works_page.scss */
+.kerway_works_page_footer .footer_logo_kerway img {
+  width: 318px;
+  height: 50px;
+}
+/* line 301, ../sass/partials/_kerway_works_page.scss */
+.kerway_works_page_footer .copyright_kerway {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+}

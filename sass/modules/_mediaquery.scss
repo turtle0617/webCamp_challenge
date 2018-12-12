@@ -1,0 +1,34 @@
+$width-phone: 480px;
+$width-ipad: 768px;
+$width-laptop: 960px;
+$width-pc: 1200px;
+
+@mixin media_breaking_point_kerway_works{
+    @media all and (max-width: 750px) {
+        @content;
+    }
+}
+
+
+
+@mixin media_mobile {
+    @media all and (min-width: $width-phone) {
+        @content;
+    }
+}
+@mixin media_ipad_max {
+    @media all and (max-width: $width-ipad) {
+        @content;
+    }
+}
+@mixin media_laptop {
+    @media all and (min-width: $width-laptop) {
+        @content;
+    }
+}
+
+@mixin media_pc_max{
+    @media all and (max-width: $width-pc){
+        @content;
+    }
+}
