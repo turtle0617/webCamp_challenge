@@ -272,8 +272,8 @@ body {
       top: 9vh;
     }
     margin-top: 20px;
-    left: 3vw;
-    bottom: 20px;
+    left: 10vw;
+    bottom: 7vh;
   }
 
   &_title {
@@ -284,7 +284,7 @@ body {
     }
     @include title_font(40pt,normal,6pt);
     top: 15vh;
-    left: 11vw;
+    left: 7vw;
   }
 
   &_orderLink {
@@ -300,8 +300,8 @@ body {
     height: 100px;
     width: calc(10vw - 12px);
     padding: 0 6px;
-    top: -15vh;
-    left: -3vw;
+    top: -6vh;
+    left: 3vw;
   }
 }
 
