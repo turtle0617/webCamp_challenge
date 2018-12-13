@@ -1,0 +1,383 @@
+@import '../modules/mediaquery.scss';
+@mixin title_font($size,$lineHeight,$letterSpace) {
+  font-size: $size;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpace;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+@mixin text_font($size,$lineHeight,$letterSpace) {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: $size;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpace;
+  font-weight: lighter;
+}
+@mixin colorArea($height,$width) {
+  background-color: #efeceb;
+  height: $height;
+  width: $width;
+}
+
+%banner_line {
+  width: calc(13% - 1px);
+  height: 1vw;
+  background-color: black;
+}
+
+body {
+  margin: 0;
+  overflow-y: hidden;
+}
+
+.parallax {
+  padding: 0 calc(7vw + 5px);
+  perspective: 5px;
+  -moz-perspective: 5px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective-origin-x: 50%;
+  perspective-origin-x: 50%;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.parallax_layer {
+  position: absolute;
+  -webkit-transform-origin-x: 50%;
+}
+
+.layer__back {
+  // transform: translateZ(0) scale(1);
+  transform: translateZ(-1px) scale(1.2);
+}
+
+.layer__base {
+  transform: translateZ(0) scale(1);
+}
+
+.layer__text {
+  // transform: translateZ(0) scale(1);
+  transform: translateZ(1px) scale(.8);
+}
+
+.layer__top {
+  // transform: translateZ(0) scale(1);
+  transform: translateZ(2px) scale(.6);
+}
+
+.parallax_group {
+  transform-style: preserve-3d;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+}
+
+.banner_title {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.banner_title img {
+  height: 32px;
+  @include phone-width {
+    height: 20px;
+  }
+}
+
+.main_banner {
+  margin-top: 200px;
+  margin-bottom: 95px;
+  @include phone-width {
+    margin-top: 50px;
+    margin-bottom: 390px;
+  }
+
+  &_colorArea {
+    @include colorArea(calc(50vh + 4px),90%);
+    @include phone-width {
+      height: 20vh;
+      top: 0;
+    }
+    max-width: 1028px;
+    bottom: -95px;
+    left: -2vw;
+  }
+
+  &_text {
+    @include title_font(1.6rem,2.6rem,4pt);
+    @include phone-width {
+      @include title_font(0.5rem,1rem,4pt);
+    }
+    bottom: -60px;
+    left: 33vw;
+  }
+}
+
+.sub_banner {
+  margin: -1% 7% 570px 40px;
+  width: calc(55% - 5px);
+  @include phone-width {
+    display: none;
+  }
+
+  &_image {
+    position: relative;
+  }
+
+  &_text {
+    @include text_font(1.05rem,25pt,0.34em);
+    top: 50%;
+    transform: translateY(-50%);
+    right: -30vw;
+  }
+}
+
+.mbbr {
+  display: none;
+  @include phone-width {
+    display: inline;
+  }
+}
+
+.introduction_banner {
+  padding-left: 350px;
+
+  &_title {
+    top: -50vh;
+    @include title_font(1.6rem,2.6rem,4pt);
+    @include phone-width {
+      @include title_font(1rem,2rem,4pt);
+      bottom: 20vh;
+      left: 0;
+    }
+  }
+
+  &_subTitle {
+    @include text_font(1.05rem,normal,0.34rem);
+    @include phone-width {
+      top: -20vh;
+      left: 0;
+    }
+    top: -35vh;
+    right: 0;
+  }
+
+  &_subLine {
+    @include phone-width {
+      left: -6vw;
+    }
+    top: -35vh;
+    width: 30px;
+    height: 5px;
+    margin-top: 20px;
+    background-color: black;
+  }
+}
+
+.couture_banner {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 340px;
+  width: 90%;
+  @include phone-width {
+    width: 100%;
+    margin-bottom: 340px;
+  }
+
+  &_image {
+    position: relative;
+  }
+
+  &_colorArea {
+    @include colorArea(100%,44%);
+    max-width: 1028px;
+    top: 50px;
+    right: 0;
+  }
+
+  &_line {
+    @extend %banner_line;
+    @include phone-width {
+      right: 5vw;
+      bottom: 4vh;
+    }
+    right: 9vw;
+    bottom: 12vh;
+  }
+
+  &_title {
+    @include title_font(40pt,normal,6pt);
+    @include phone-width {
+      @include title_font(20pt,normal,6pt);
+      right: 0;
+      top: 3vh;
+    }
+    right: 9vw;
+    top: 6vh;
+  }
+
+  &_orderLink {
+    @include text_font(1.05rem,25pt,0.34rem);
+    @include phone-width {
+      width: 20vw;
+      top: 7vh;
+      right: 0;
+      border: none;
+    }
+    border: 1px solid;
+    height: 100px;
+    width: calc(10vw - 12px);
+    padding: 0 6px;
+    top: 18vh;
+    right: 9vw;
+  }
+}
+
+.collections_banner {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 90px;
+  padding-left: 7%;
+  width: calc(41% + 2px);
+  @include phone-width {
+    width: 60%;
+    margin-bottom: 90px;
+  }
+
+  &_image {
+    position: relative;
+  }
+
+  &_colorArea {
+    @include colorArea(425px,90%);
+    @include phone-width {
+      @include colorArea(150px,90%);
+      top: -3vh;
+    }
+    max-width: 1028px;
+    top: -20vh;
+    left: -5vw;
+  }
+
+  &_line {
+    @extend %banner_line;
+    @include phone-width {
+      left: 10vw;
+      top: 9vh;
+    }
+    margin-top: 20px;
+    left: 3vw;
+    bottom: 20px;
+  }
+
+  &_title {
+    @include phone-width {
+      @include title_font(15pt,normal,6pt);
+      top: 3vh;
+      left: 4vw;
+    }
+    @include title_font(40pt,normal,6pt);
+    top: 15vh;
+    left: 11vw;
+  }
+
+  &_orderLink {
+    @include phone-width {
+      width: 20vw;
+      top: 6vh;
+      right: 0;
+      border: none;
+      left: 7vw;
+    }
+    @include text_font(1.05rem,25pt,0.34rem);
+    border: 1px solid;
+    height: 100px;
+    width: calc(10vw - 12px);
+    padding: 0 6px;
+    top: -15vh;
+    left: -3vw;
+  }
+}
+
+.seasons_banner {
+  margin-left: auto;
+  width: 34%;
+  @include phone-width {
+    width: 40%;
+  }
+
+  &_image {
+    position: relative;
+  }
+
+  &_colorArea {
+    @include phone-width {
+      @include colorArea(18vw,50%);
+      bottom: 7vh;
+    }
+    @include colorArea(16vw,46%);
+    max-width: 1028px;
+    bottom: 10vh;
+    left: -8vw;
+  }
+
+  &_line {
+    @extend %banner_line;
+    @include phone-width {
+      bottom: 8vh;
+      right: 0;
+      left: -27vw;
+    }
+    margin-top: 20px;
+    right: 6vw;
+    bottom: 18vh;
+  }
+
+  &_title {
+    @include title_font(40pt,normal,6pt);
+    @include phone-width {
+      @include title_font(15pt,normal,6pt);
+      top: 4vh;
+      left: -30vw;
+    }
+    font-size: 40pt;
+    letter-spacing: 6pt;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-weight: bold;
+    left: -21vw;
+    top: 34vh;
+  }
+
+  &_orderLink {
+    @include text_font(1.05rem,25pt,0.34rem);
+    @include phone-width {
+      width: 20vw;
+      border: none;
+      bottom: 5.5vh;
+      left: -28vw;
+    }
+    border: 1px solid;
+    height: 100px;
+    width: calc(10vw - 12px);
+    padding: 0 6px;
+    bottom: 33vh;
+    left: -9vw;
+  }
+
+  &_bgImage {
+    @include phone-width {
+      bottom: -18vh;
+    }
+    z-index: -1;
+    bottom: -45vh;
+    left: -18vw;
+    max-width: 587px;
+  }
+}
