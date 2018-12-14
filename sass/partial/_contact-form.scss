@@ -1,0 +1,107 @@
+@import "modules/_font";
+@import "modules/_mixins";
+
+
+.contact_form{
+	width: 100vw;
+	height: 100vh; 
+	background-image: url(../images/hausenncamp/contact_background.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #fff;
+	font-family: $font_family_noto_sans;
+
+	&_title {
+		padding-top: 50px;
+		padding-bottom: 40px;
+		text-align: center;
+		letter-spacing: 8px;
+		font-family: $font_family_open_sans;
+
+		h1{
+			font-weight: bold;
+			font-size: 25px;
+		}
+		
+		h2{
+			font-size: 19px;
+			font-weight: bold;
+			margin-top: 18px;
+		}		
+	}
+}
+
+form{
+	display: flex;
+	
+	.form_column{
+		width: 50%;
+		max-width: 460px;
+	}
+
+	label{
+		font-size: 12px;
+		letter-spacing: 2px;
+		padding-top: 35px;
+		padding-bottom: 13px;
+		display: block;
+	}
+
+	select{
+		background: transparent;
+		border-bottom: 1px solid #fff;
+		color: #fff;
+		font-size: 12px;
+		letter-spacing: 2px;
+	}
+	input{
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid #fff;
+	}
+
+	textarea{
+		background-color: transparent;
+		width: 100%;
+		height: 190px;
+		resize: none;
+	}
+
+	button{
+		font-size: 14px;
+		width: 140px;
+		padding: 8px;
+		background-color: transparent;
+		border: 1px solid #fff;
+		font-weight: 400;
+		color: #fff;
+	}
+}
+
+.form_title{
+	position: relative;
+	select{
+		width: 156px;
+	}
+	.arrow_down{
+		@include contact_form_arrow_down(7px,145px);
+	}
+}
+
+.form_subject{
+	position: relative;
+	select{
+		width: 195px;
+	}
+	.arrow_down{
+		@include contact_form_arrow_down(7px,186px);
+	}
+}
+
+
+.form_last_name, .form_first_name{
+	display: inline-block;
+}
+
+
+

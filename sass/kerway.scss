@@ -1,1 +1,8 @@
-@import "partial/_kerway_banner.scss"
+@import "modules/_reset";
+@import "modules/_font";
+@import "modules/_mediaquery";
+@import "partial/_contact-form";
+@import "partial/_menu-page";
+@import "partial/_kerway_works_page";
+@import "partial/_kerway_banner.scss";
+

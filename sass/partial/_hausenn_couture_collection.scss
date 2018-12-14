@@ -1,0 +1,43 @@
+
+.arrow_prev{
+  height: 20px;
+  width: 20px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 100px;
+  left: 200px;
+}
+
+.arrow_next{
+  height: 20px;
+  width: 20px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 100px;
+  right: 200px;
+}
+
+.couture_slides{
+  width: 800px;
+  display: block;
+  margin: 0 auto;
+}
+
+.slick-slide img{
+  width: 100%;
+  padding: 10px;
+  
+}
+
+.slider-nav img{
+  filter: brightness(.4) ;
+    &:hover{
+      filter: none;
+  } 
+}
+
+
