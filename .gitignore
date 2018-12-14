@@ -1,0 +1,6 @@
+.DS_Store
+.css
+.sass-cache/
+.config
+.rb
+stylesheets/
