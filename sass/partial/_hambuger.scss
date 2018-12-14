@@ -1,0 +1,65 @@
+@mixin hambugerLine(){
+  position: absolute;
+  width: 17px;
+  height: 3px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+#hambuger{
+  position: fixed;
+  width: 39px;
+  height: 19px;
+  top: 50px;
+  left: 50px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#hambuger>.line{
+  @include hambugerLine();
+  bottom: 50%;
+}
+
+
+
+#hambuger>.line_left{
+  left: 0;
+}
+#hambuger>.line_right{
+  right: 0;
+}
+
+#hambuger>.line::after{
+  @include hambugerLine();
+  transition-delay: 0.3s;
+  opacity: 1;
+  content: " ";
+  top: 6px;
+}
+
+#hambuger>.line::before{
+  @include hambugerLine();
+  transition-delay: 0.3s;
+  opacity: 1;
+  content: " ";
+  bottom: 6px;
+}
+#hambuger.active>.line::after{
+  transition: opacity;
+  opacity: 0;
+}
+#hambuger.active>.line::before{
+  transition: opacity;
+  opacity: 0;
+}
+#hambuger.active>.line_left{
+  transform:rotate(45deg);
+  width: 25px;
+  left: 2px;
+}
+#hambuger.active>.line_right{
+  transform:rotate(-45deg);
+  width: 25px;
+  left: 2px;
+}

@@ -26,12 +26,12 @@
 }
 
 body {
-  margin: 0;
-  overflow-y: hidden;
+  // overflow-y: hidden;
 }
 
 .parallax {
-  padding: 0 calc(7vw + 5px);
+  padding: 0 100px;
+  // padding: calc(7vw + 5px);
   perspective: 5px;
   -moz-perspective: 5px;
   height: 100vh;
@@ -42,6 +42,10 @@ body {
 
   &::-webkit-scrollbar {
     width: 0;
+  }
+
+  @include phone-width {
+    padding: 0 30px;
   }
 }
 
