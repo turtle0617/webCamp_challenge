@@ -21,14 +21,15 @@
   right: 200px;
 }
 
-.couture_slides{
-  width: 800px;
+.couture_slides_wrapper{
+  max-width: 800px;
   display: block;
   margin: 0 auto;
 }
 
 .slick-slide img{
   width: 100%;
+  height: auto;
   padding: 10px;
   
 }
@@ -40,4 +41,7 @@
   } 
 }
 
+.slick-slider{
+  margin-bottom: 0px;
+}
 
