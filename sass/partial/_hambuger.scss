@@ -1,3 +1,5 @@
+@import '../modules/mediaquery';
+
 @mixin hambugerLine(){
   position: absolute;
   width: 17px;
@@ -14,6 +16,11 @@
   left: 50px;
   cursor: pointer;
   z-index: 999;
+
+  @include mobile {
+    top: 35px;
+    left: 15px;
+  }
 }
 
 #hambuger>.line{

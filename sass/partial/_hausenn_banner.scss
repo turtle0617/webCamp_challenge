@@ -29,6 +29,10 @@ body {
   // overflow-y: hidden;
 }
 
+#banner {
+  transition: transform .3s ease-in;
+}
+
 .parallax {
   padding: 0 100px;
   // padding: calc(7vw + 5px);

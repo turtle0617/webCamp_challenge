@@ -2,9 +2,12 @@ const homePage = (function(){
   const home = document.querySelector('#home');
   const bg = document.querySelector(".bg");
   const homeAssets = document.querySelector('.home_assets');
+  const hambuger = document.querySelector('#hambuger');
   const walk = 25;
 
   function moveBackground(e) {
+    // 若選單打開則移除背景移動效果
+    if (!!hambuger.classList[0]) return;
     let { offsetWidth: width, offsetHeight: height } = bg;
     let { offsetX: x, offsetY: y } = e;
 
@@ -20,9 +23,9 @@ const homePage = (function(){
 
     const xWalk = ((x / width * walk) - (walk / 2)).toFixed(1);
     const yWalk = ((y / height * walk) - (walk / 2)).toFixed(1);
+    if (window.innerWidth <= 760) return;
     bg.style.transform = `matrix(1.05, 0, 0, 1.05, ${xWalk}, ${yWalk})`
   }
 
-  home.addEventListener("mousemove", moveBackground);
-
+  window.addEventListener('mousemove', moveBackground);
 }());

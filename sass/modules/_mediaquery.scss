@@ -27,3 +27,9 @@ $phones-media: 479px;
     @content;
   }
 }
+
+@mixin mobile {
+  @media all and (max-width: $pads-media) {
+    @content;
+  }
+}
