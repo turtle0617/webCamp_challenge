@@ -12,7 +12,7 @@
     $(".filter_element_name").click(function(){ 
       selectedClass = $(this).attr("data-rel"); 
       $("#works").fadeTo(100, 0.1);
-      $("#works div").not("."+selectedClass).fadeOut().removeClass('scale-animation');
+      $("#works a").not("."+selectedClass).fadeOut().removeClass('scale-animation');
       setTimeout(function() {
         $("."+selectedClass).fadeIn().addClass('scale-animation');
         $("#works").fadeTo(300, 1);
@@ -22,11 +22,11 @@
 
     });
 
-  //fliter按鈕點擊，照片回復all
+  //fliter按鈕點擊，顯示全部照片
     $(".filter_button").click(function(){ 
       selectedClass = $(this).attr("data-rel"); 
       $("#works").fadeTo(100, 0.1);
-      $("#works div").not("."+selectedClass).fadeOut().removeClass('scale-animation');
+      $("#works a").not("."+selectedClass).fadeOut().removeClass('scale-animation');
       setTimeout(function() {
         $("."+selectedClass).fadeIn().addClass('scale-animation');
         $("#works").fadeTo(300, 1);
