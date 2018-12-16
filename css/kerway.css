@@ -236,9 +236,9 @@ button {
   position: fixed;
   right: 0;
   top: 50%;
-  -webkit-transform: translateY(-104%);
-  -ms-transform: translateY(-104%);
-  transform: translateY(-104%);
+  -webkit-transform: translateY(-106%);
+  -ms-transform: translateY(-106%);
+  transform: translateY(-106%);
   z-index: 100; }
   .contact_btn img {
     max-width: 100px; }
@@ -860,78 +860,6 @@ form {
         font-size: 20px;
         letter-spacing: 3px; } }
 
-#hambuger > .line {
-  position: absolute;
-  width: 17px;
-  height: 3px;
-  background-color: white;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  bottom: 50%; }
-
-#hambuger > .line_left {
-  left: 0; }
-
-#hambuger > .line_right {
-  right: 0; }
-
-#hambuger > .line::after {
-  position: absolute;
-  width: 17px;
-  height: 3px;
-  background-color: white;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transition-delay: 0.3s;
-  -o-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-  opacity: 1;
-  content: " ";
-  top: 6px; }
-
-#hambuger > .line::before {
-  position: absolute;
-  width: 17px;
-  height: 3px;
-  background-color: white;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transition-delay: 0.3s;
-  -o-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-  opacity: 1;
-  content: " ";
-  bottom: 6px; }
-
-#hambuger.active > .line::after {
-  -webkit-transition: opacity;
-  -o-transition: opacity;
-  transition: opacity;
-  opacity: 0; }
-
-#hambuger.active > .line::before {
-  -webkit-transition: opacity;
-  -o-transition: opacity;
-  transition: opacity;
-  opacity: 0; }
-
-#hambuger.active > .line_left {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 25px;
-  left: 2px; }
-
-#hambuger.active > .line_right {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  width: 25px;
-  left: 2px; }
-
 #works {
   -webkit-column-count: 3;
   -moz-column-count: 3;
@@ -976,26 +904,28 @@ form {
   padding: 0; }
 
 .lightbox-target {
+  display: none;
   position: fixed;
+  width: 100vw;
+  height: 100vh;
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: opacity .5s ease-in-out;
   -o-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 100; }
 
 .lightbox-target img {
+  width: 100%;
   margin: auto;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  max-height: 0%;
-  max-width: 0%;
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   -webkit-transition: .5s ease-in-out;
@@ -1016,20 +946,11 @@ a.lightbox-close {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out; }
 
-.lightbox-target:target {
-  opacity: 1;
-  top: 0;
-  bottom: 0;
-  z-index: 1; }
-
-.lightbox-target:target img {
-  max-height: 100%;
-  max-width: 100% !important; }
-
 .lightbox-target:target a.lightbox-close {
   top: 0px; }
 
 .kerway_works_page_footer {
+  position: relative;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1104,8 +1025,7 @@ a.lightbox-close {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden; }
+  justify-content: space-between; }
   @media all and (max-width: 768px) {
     .filter_bar {
       display: none; } }

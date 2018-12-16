@@ -429,7 +429,7 @@ nav {
   padding: 0 100px; }
   @media all and (max-width: 479px) {
     #banner {
-      padding: 0 30px; } }
+      padding: 0 15px; } }
 
 .parallax {
   -webkit-perspective: 5px;
@@ -969,3 +969,68 @@ nav {
 
 .opening ~ * {
   visibility: hidden; }
+
+/*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
+並且使用我上面設立的變數來調動media queries的width*/
+.hausenn_works_page_footer {
+  background-color: #d6c1c4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 75px;
+  padding-bottom: 65px;
+  margin-top: 45vh; }
+  .hausenn_works_page_footer .container {
+    width: 100%;
+    position: relative;
+    padding-left: 100px;
+    padding-right: 100px; }
+    @media all and (max-width: 768px) {
+      .hausenn_works_page_footer .container {
+        padding-left: 15px;
+        padding-right: 15px; } }
+  .hausenn_works_page_footer .footer_content {
+    position: relative; }
+  .hausenn_works_page_footer .contact {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+    @media all and (max-width: 768px) {
+      .hausenn_works_page_footer .contact {
+        position: relative;
+        padding-bottom: 25px; } }
+  .hausenn_works_page_footer .address {
+    font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+    letter-spacing: 1px;
+    font-size: 13px;
+    padding-bottom: 24px; }
+  .hausenn_works_page_footer .email, .hausenn_works_page_footer .phone {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 15px; }
+  .hausenn_works_page_footer .footer_logo_kerway {
+    text-align: right;
+    line-height: 0;
+    padding-bottom: 37px; }
+    @media all and (max-width: 480px) {
+      .hausenn_works_page_footer .footer_logo_kerway {
+        text-align: left;
+        padding-bottom: 25px; } }
+    .hausenn_works_page_footer .footer_logo_kerway img {
+      width: 318px;
+      height: 50px; }
+      @media all and (max-width: 480px) {
+        .hausenn_works_page_footer .footer_logo_kerway img {
+          height: 23px;
+          width: auto; } }
+  .hausenn_works_page_footer .copyright_kerway {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-align: right;
+    font-size: 13px; }
+    @media all and (max-width: 480px) {
+      .hausenn_works_page_footer .copyright_kerway {
+        text-align: left; } }
