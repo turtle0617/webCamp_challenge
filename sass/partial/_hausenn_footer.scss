@@ -1,0 +1,82 @@
+@import "./modules/_mediaquery";
+@import "./modules/_font";
+
+.hausenn_works_page_footer{
+	background-color: #d6c1c4;
+	display: flex;
+	padding-top: 75px;
+	padding-bottom: 65px;
+	margin-top: 45vh;
+
+	.container{
+		width: 100%;
+		position: relative;
+		padding-left: 100px;
+		padding-right: 100px;
+		@include media_ipad_max{
+			padding-left: 15px;
+			padding-right: 15px;
+			}
+		}
+
+
+
+		.footer_content{
+			position: relative;
+		}
+	
+		.contact{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		@include media_ipad_max{
+			position: relative;
+			padding-bottom: 25px;
+			}
+		}
+
+		.address{
+			font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+			letter-spacing: 1px;
+			font-size: 13px;
+			padding-bottom: 24px;
+		}
+
+		.email, .phone{
+			font-family: $font_family_noto_sans;
+			font-weight: 100;
+			font-size: 13px;
+			letter-spacing: 1px;
+			line-height: 15px;
+		}
+
+	.footer_logo_kerway{
+		text-align: right;
+		line-height: 0;
+		padding-bottom: 37px;
+		@include media_mobile{
+			text-align: left;
+			padding-bottom: 25px;
+		}
+
+		img{
+			width: 318px;
+			height: 50px;
+		@include media_mobile{
+			height: 23px;
+			width: auto;
+
+			}
+		}
+	}
+	.copyright_kerway{
+		font-family: $font_family_open_sans;
+		font-weight: 100;
+		letter-spacing: 1px;
+		text-align: right;
+		font-size: 13px;
+		@include media_mobile{
+			text-align: left;
+		}
+	}
+}

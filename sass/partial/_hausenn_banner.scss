@@ -33,7 +33,7 @@ body {
   transition: transform .3s ease-in;
   padding: 0 100px;
   @include phone-width {
-    padding: 0 30px;
+    padding: 0 15px;
   }
 }
 

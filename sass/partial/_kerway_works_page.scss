@@ -87,64 +87,78 @@
 }
 
 
-//漢堡----------------------------------------
+// //漢堡----------------------------------------
 
-@mixin hambugerLine(){
-  position: absolute;
-  width: 17px;
-  height: 3px;
-  background-color: white;
-  transition: 0.5s;
-}
+// @mixin hambugerLine(){
+//   position: absolute;
+//   width: 17px;
+//   height: 3px;
+//   background-color: white;
+//   transition: 0.5s;
+// }
 
-#hambuger>.line{
-  @include hambugerLine();
-  bottom: 50%;
-}
+// #hambuger{
+//   position: fixed;
+//   width: 39px;
+//   height: 19px;
+//   top: 50px;
+//   left: 50px;
+//   z-index: 2;
+//   cursor: pointer;
+
+//    @include media_mobile{
+// 		left: 15px;
+// 	}
+// }
+
+// #hambuger>.line{
+//   @include hambugerLine();
+//   bottom: 50%;
+// }
 
 
 
-#hambuger>.line_left{
-  left: 0;
-}
-#hambuger>.line_right{
-  right: 0;
-}
+// #hambuger>.line_left{
+//   left: 0;
+// }
+// #hambuger>.line_right{
+//   right: 0;
+// }
 
-#hambuger>.line::after{
-  @include hambugerLine();
-  transition-delay: 0.3s;
-  opacity: 1;
-  content: " ";
-  top: 6px;
-}
+// #hambuger>.line::after{
+//   @include hambugerLine();
+//   transition-delay: 0.3s;
+//   opacity: 1;
+//   content: " ";
+//   top: 6px;
+// }
 
-#hambuger>.line::before{
-  @include hambugerLine();
-  transition-delay: 0.3s;
-  opacity: 1;
-  content: " ";
-  bottom: 6px;
-}
-#hambuger.active>.line::after{
-  transition: opacity;
-  opacity: 0;
-}
-#hambuger.active>.line::before{
-  transition: opacity;
-  opacity: 0;
-}
-#hambuger.active>.line_left{
-  transform:rotate(45deg);
-  width: 25px;
-  left: 2px;
-  // background-color: #fff;
-}
-#hambuger.active>.line_right{
-  transform:rotate(-45deg);
-  width: 25px;
-  left: 2px;
-}
+// #hambuger>.line::before{
+//   @include hambugerLine();
+//   transition-delay: 0.3s;
+//   opacity: 1;
+//   content: " ";
+//   bottom: 6px;
+// }
+// #hambuger.active>.line::after{
+//   transition: opacity;
+//   opacity: 0;
+// }
+// #hambuger.active>.line::before{
+//   transition: opacity;
+//   opacity: 0;
+// }
+// #hambuger.active>.line_left{
+//   transform:rotate(45deg);
+//   width: 25px;
+//   left: 2px;
+//   // background-color: #fff;
+// }
+// #hambuger.active>.line_right{
+//   transform:rotate(-45deg);
+//   width: 25px;
+//   left: 2px;
+// }
 
 //瀑布流-----------------------------------------
 #works {
@@ -194,25 +208,27 @@
 //lightbox
 
 .lightbox-target {
+	display: none;
   position: fixed;
+	width: 100vw;
+	height: 100vh;
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  opacity: 0;
+  opacity: 1;
   transition: opacity .5s ease-in-out;
   overflow: hidden;
+	z-index: 100;
 }
 
 .lightbox-target img {
+	width: 100%;
   margin: auto;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  max-height: 0%;
-  max-width: 0%;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   transition: .5s ease-in-out;
 }
@@ -229,17 +245,17 @@ a.lightbox-close {
   transition: .5s ease-in-out;
 }
 
-.lightbox-target:target {
-  opacity: 1;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-}
+// .lightbox-target:target {
+//   opacity: 1;
+//   top: 0;
+//   bottom: 0;
+//   z-index: 1;
+// }
 
-.lightbox-target:target img {
-  max-height: 100%;
-  max-width: 100% !important;
-}
+// .lightbox-target:target img {
+//   max-height: 100%;
+//   max-width: 100% !important;
+// }
 
 .lightbox-target:target a.lightbox-close {
   top: 0px;
@@ -249,6 +265,7 @@ a.lightbox-close {
 
 //FOOTER-------------------------------------------------
 .kerway_works_page_footer{
+	position: relative;
 	background-color: #fff;
 	display: flex;
 	padding-top: 75px;
@@ -305,7 +322,6 @@ a.lightbox-close {
 		@include media_mobile{
 			height: 23px;
 			width: auto;
-
 			}
 		}
 	}
@@ -334,7 +350,6 @@ a.lightbox-close {
 	font-weight: 100;
 	display: flex;
 	justify-content: space-between;
-	overflow: hidden;
 
 	@include media_ipad_max{
 		display: none;
@@ -350,8 +365,6 @@ a.lightbox-close {
 			grid-gap: 2px;
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(3, 1fr);
-
-
 
 			.small-box{
 			  height: 8px;
@@ -379,17 +392,18 @@ a.lightbox-close {
 				&:hover{
 				background: #a5a1a1;
 				}
-
 			}
-
 			.filter_element_title{
 				color: white;
 				padding-top: 10px;
 				padding-bottom: 10px;
 			}
+			
 		}
 	}
 }
+
+
 
 #project_items{
 	position: absolute;
