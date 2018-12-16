@@ -5,7 +5,7 @@ let isActive = false;
   const hambuger = document.getElementById("hambuger");
   const navbar = document.querySelector('.navbar');
   const contactBtn = document.querySelector('.contact_btn');
-  const contactPage = document.querySelector('.contact');
+  const contactPage = document.querySelector('.contacts');
 
   hambuger.addEventListener("click", function () {
     isActive = !isActive;
@@ -14,7 +14,7 @@ let isActive = false;
     } 
     if (!isActive) {
       navbar.classList.remove("active");
-      contactPage.classList.remove("contact-active");
+      contactPage.classList.remove("contacts-active");
       home.style.transform = "translateX(0)";
       banner.style.transform = "translateX(0)";
       contactBtn.style.zIndex = "100";
