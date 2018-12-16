@@ -7,7 +7,7 @@
   function contactPageSlide(e) {
     contact.classList.add('contacts-active');
     home.style.transform = "translateX(-100%)";
-    // banner.style.transform = "translateX(-100%)";
+    banner.style.transform = "translateX(-100%)";
     this.style.zIndex = '-1';
 
     // toggle hambuger status
