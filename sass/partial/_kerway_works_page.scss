@@ -13,7 +13,7 @@
 			padding-left: 15px;
 		}
 	}
-	
+
 	.container{
 		max-width: 1150px;
 		margin: 0 auto;
@@ -30,7 +30,7 @@
 			width: 175px;
 			@include media_mobile {
 				width: 120px;
-			}	
+			}
 		}
 	}
 }
@@ -160,8 +160,8 @@
 }
 
 //瀑布流-----------------------------------------
-#works {  
-    -webkit-column-count: 3; 
+#works {
+    -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
     -webkit-column-gap: 50px;
@@ -175,17 +175,17 @@
 		column-count: 2;
 		column-width: 50%;
 		column-gap: 15px;
-		padding-bottom: 75px;		
+		padding-bottom: 75px;
 	}
 }
 
 
-.item { 
+.item {
     -webkit-transform: scale(0);
     transform: scale(0);
     -webkit-transition: all 350ms ease;
     transition: all 350ms ease;
-    
+
     img {
 	    max-width: 100%;
 	    width: 100%;
@@ -208,7 +208,7 @@
 
 .lightbox-target {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -268,11 +268,11 @@ a.lightbox-close {
 	padding-bottom: 65px;
 	padding-left: 15px;
 	padding-right: 15px;
-	
+
 	.container{
 		width: 100%;
 		position: relative;
-		
+
 
 		.footer_content{
 			position: relative;
@@ -302,7 +302,7 @@ a.lightbox-close {
 			letter-spacing: 1px;
 			line-height: 15px;
 		}
-	
+
 	.footer_logo_kerway{
 		text-align: right;
 		line-height: 0;
@@ -336,7 +336,7 @@ a.lightbox-close {
 
 .filter_bar{
 	background-color: rgba(0,0,0,0.5);
-	position: fixed;
+	position: sticky;
 	bottom: 0;
 	left: 0;
 	width: 100%;
@@ -347,7 +347,8 @@ a.lightbox-close {
 	font-weight: 100;
 	display: flex;
 	justify-content: space-between;
-	
+	overflow: hidden;
+
 	@include media_ipad_max{
 		display: none;
 	}
@@ -363,7 +364,7 @@ a.lightbox-close {
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(3, 1fr);
 
-			
+
 
 			.small-box{
 			  height: 8px;
@@ -408,8 +409,8 @@ a.lightbox-close {
 	right: 487px;
 	top: 5px;
 	transition: all 2s ease;
-	
-	&:hover{	
+
+	&:hover{
 		transform: translateY(-250px);
 	}
 }
@@ -435,7 +436,7 @@ a.lightbox-close {
 }
 
 
-//footer-arrow 
+//footer-arrow
 
 .arrow_box{
   position: relative;
@@ -444,9 +445,9 @@ a.lightbox-close {
   margin: auto 0;
   transform: translateX(380px);
   overflow-y: scroll;
-  scroll-behavior: smooth;	
+  scroll-behavior: smooth;
   overflow: -moz-scrollbars-none;
-   &::-webkit-scrollbar { 
+   &::-webkit-scrollbar {
     	display: none;
 	}
 }
