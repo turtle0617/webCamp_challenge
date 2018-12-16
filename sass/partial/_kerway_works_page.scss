@@ -1,0 +1,427 @@
+@import "modules/_mediaquery";
+@import "modules/_font";
+
+#kerway_works_page{
+	background-color: #000;
+	position: relative;
+
+	.works_main_content{
+		padding-top: 50px;
+		margin: 0 auto;
+		@include media_ipad_max{
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+	}
+
+	.container{
+		max-width: 1150px;
+		margin: 0 auto;
+	}
+
+	.kerway-logo{
+		margin-bottom: 175px;
+		text-align: center;
+		@include media_mobile{
+			margin-bottom: 70px;
+		}
+
+		img{
+			width: 175px;
+			@include media_mobile {
+				width: 120px;
+			}	
+		}
+	}
+}
+
+//TITLE---------------------------------------
+
+.works_title{
+	position: absolute;
+	left: 50px;
+	top: 177.7px;
+	z-index: 1;
+	@include media_mobile{
+		left: 15px;
+		top: 104px;
+	}
+	.title_white_line{
+		width: 150px;
+		height: 16px;
+		background-color: #fff;
+		margin-bottom: 30px;
+		@include media_mobile {
+			width: 77px;
+			height: 8px;
+			margin-bottom: 15px;
+		}
+	}
+
+	h3{
+		font-family: $font_family_open_sans;
+		font-weight: bold;
+		font-size: 40px;
+		letter-spacing: 4px;
+		color: #fff;
+		padding-bottom: 30px;
+		@include media_mobile {
+			font-size: 22px;
+			letter-spacing: 3px;
+			padding-bottom: 5px;
+		}
+	}
+
+	h4{
+		font-family: $font_family_noto_sans;
+		font-weight: bold;
+		font-size: 32px;
+		letter-spacing: 4px;
+		color: #fff;
+		@include media_mobile {
+			font-size: 20px;
+			letter-spacing: 3px;
+		}
+	}
+}
+
+
+//漢堡----------------------------------------
+
+@mixin hambugerLine(){
+  position: absolute;
+  width: 17px;
+  height: 3px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+#hambuger{
+  position: fixed;
+  width: 39px;
+  height: 19px;
+  top: 50px;
+  left: 50px;
+  z-index: 2;
+  cursor: pointer;
+
+   @include media_mobile{
+		left: 15px;
+	}
+}
+
+#hambuger>.line{
+  @include hambugerLine();
+  bottom: 50%;
+}
+
+
+
+#hambuger>.line_left{
+  left: 0;
+}
+#hambuger>.line_right{
+  right: 0;
+}
+
+#hambuger>.line::after{
+  @include hambugerLine();
+  transition-delay: 0.3s;
+  opacity: 1;
+  content: " ";
+  top: 6px;
+}
+
+#hambuger>.line::before{
+  @include hambugerLine();
+  transition-delay: 0.3s;
+  opacity: 1;
+  content: " ";
+  bottom: 6px;
+}
+#hambuger.active>.line::after{
+  transition: opacity;
+  opacity: 0;
+}
+#hambuger.active>.line::before{
+  transition: opacity;
+  opacity: 0;
+}
+#hambuger.active>.line_left{
+  transform:rotate(45deg);
+  width: 25px;
+  left: 2px;
+  // background-color: #fff;
+}
+#hambuger.active>.line_right{
+  transform:rotate(-45deg);
+  width: 25px;
+  left: 2px;
+}
+
+//瀑布流-----------------------------------------
+#works {  
+    -webkit-column-count: 3; 
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    -webkit-column-width: 33.33333333333333%;
+    -moz-column-width: 33.33333333333333%;
+    column-width: 33.33333333333333%;
+    padding-bottom: 150px;
+    @include media_ipad_max {
+		column-count: 2;
+		column-width: 50%;
+		column-gap: 15px;
+		padding-bottom: 75px;		
+	}
+}
+
+
+.item { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    
+    img {
+	    max-width: 100%;
+	    width: 100%;
+	    height: auto;
+	    margin-bottom: 50px;
+  	}
+}
+
+.scale-animation {
+  transform: scale(1);
+}
+
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+
+
+//FOOTER-------------------------------------------------
+.kerway_works_page_footer{
+	background-color: #fff;
+	display: flex;
+	padding-top: 75px;
+	padding-bottom: 65px;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+	.container{
+		width: 100%;
+		position: relative;
+		
+
+		.footer_content{
+			position: relative;
+		}
+	}
+		.contact{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		@include media_mobile{
+			position: relative;
+			padding-bottom: 25px;
+			}
+		}
+
+		.address{
+			font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+			letter-spacing: 1px;
+			font-size: 13px;
+			padding-bottom: 24px;
+		}
+
+		.email, .phone{
+			font-family: $font_family_noto_sans;
+			font-weight: 100;
+			font-size: 13px;
+			letter-spacing: 1px;
+			line-height: 15px;
+		}
+	
+	.footer_logo_kerway{
+		text-align: right;
+		line-height: 0;
+		padding-bottom: 37px;
+		@include media_mobile{
+			text-align: left;
+			padding-bottom: 25px;
+		}
+
+		img{
+			width: 318px;
+			height: 50px;
+		@include media_mobile{
+			height: 23px;
+			width: auto;
+
+			}
+		}
+	}
+	.copyright_kerway{
+		font-family: $font_family_open_sans;
+		font-weight: 100;
+		letter-spacing: 1px;
+		text-align: right;
+		font-size: 13px;
+		@include media_mobile{
+			text-align: left;
+		}
+	}
+}
+
+.filter_bar{
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 47px;
+	font-family: $font_family_noto_sans;
+	font-size: 16px;
+	letter-spacing: 4px;
+	font-weight: 100;
+	display: flex;
+	justify-content: space-between;
+	
+	@include media_ipad_max{
+		display: none;
+	}
+
+	.filter_button{
+		margin: auto 0;
+		padding-left: 50px;
+
+		.filter_grid{
+			width: 28px;
+			display: grid;
+			grid-gap: 2px;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+
+			
+
+			.small-box{
+			  height: 8px;
+			  width: 8px;
+			  background-color: white;
+			}
+		}
+	}
+
+	.filter-menu{
+		width: 850px;
+		display: flex;
+		justify-content: space-around;
+
+		.filter_element{
+			display: inline-block;
+			color: white;
+			width: 165px;
+
+			.filter_element_name{
+				background: #efefef;
+				color: black;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				&:hover{
+				background: #a5a1a1;
+				}
+
+			}
+
+			.filter_element_title{
+				color: white;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+}
+
+#project_items{
+	position: absolute;
+	right: 487px;
+	top: 5px;
+	transition: all 2s ease;
+	
+	&:hover{	
+		transform: translateY(-250px);
+	}
+}
+
+#photographer{
+	position: absolute;
+	right: 277px;
+	top: 5px;
+	transition: all 2s ease;
+	&:hover{
+		transform: translateY(-220px);
+	}
+}
+
+#stylist{
+	position: absolute;
+	right: 67px;
+	top: 5px;
+	transition: all 2s ease;
+	&:hover{
+		transform: translateY(-90px);
+	}
+}
+
+
+//footer-arrow 
+
+.arrow_box{
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: auto 0;
+  transform: translateX(380px);
+  overflow-y: scroll;
+  scroll-behavior: smooth;	
+  overflow: -moz-scrollbars-none;
+   &::-webkit-scrollbar { 
+    	display: none;
+	}
+}
+
+.arrow_line{
+  width:1px;
+  height: 24px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.arrow_line::before{
+  content:"";
+  height: 1px;
+  width: 17px;
+  top: 5px;
+  left: 10px;
+  position: absolute;
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+.arrow_line::after{
+  content:"";
+  height: 1px;
+  width: 16px;
+  top: 5px;
+  left: -1px;
+  position: absolute;
+  background-color: white;
+  transform: rotate(135deg);
+}

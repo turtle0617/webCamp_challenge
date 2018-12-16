@@ -1,3 +1,4 @@
+
 //先針對media queries的width設為變數
 $pc-media: 960px;
 $pcs-media: 959px;
@@ -5,6 +6,10 @@ $pad-media: 760px;
 $pads-media: 759px;
 $phone-media: 480px;
 $phones-media: 479px;
+$width-phone: 480px;
+$width-ipad: 768px;
+$width-laptop: 960px;
+$width-pc: 1200px;
 /*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
 並且使用我上面設立的變數來調動media queries的width*/
 @mixin pc-width{
@@ -32,4 +37,31 @@ $phones-media: 479px;
   @media all and (max-width: $pads-media) {
     @content;
   }
+}
+@mixin media_breaking_point_kerway_works{
+    @media all and (max-width: 750px) {
+        @content;
+    }
+}
+
+@mixin media_mobile {
+    @media all and (max-width: $width-phone) {
+        @content;
+    }
+}
+@mixin media_ipad_max {
+    @media all and (max-width: $width-ipad) {
+        @content;
+    }
+}
+@mixin media_laptop {
+    @media all and (min-width: $width-laptop) {
+        @content;
+    }
+}
+
+@mixin media_pc_max{
+    @media all and (max-width: $width-pc){
+        @content;
+    }
 }
