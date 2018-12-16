@@ -1,0 +1,27 @@
+.black-background{
+	background-color: black;
+	height: 100vh;
+	animation: twinking 6s;
+	animation-timing-function: ease-in-out;
+	@-webkit-keyframes twinking{
+	0%   {opacity: 100;}
+	20%  {opacity: 0;}
+	40%  {opacity: 100;}
+	60%  {opacity: 0;}
+	80%  {opacity: 100;}
+	100% {opacity: 0;}
+	}
+}	
+
+.logo-twinkling{
+	width: 100px;
+	height: 100px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+	img{
+		width: 100%;		
+	}
+}

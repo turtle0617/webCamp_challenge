@@ -1,15 +1,21 @@
 <!DOCTYPE html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./stylesheets/kerway.css">
+  <link rel="stylesheet" href="./css/kerway.css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Open+Sans:300,400,700" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
-	<title>kerway</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <title>kerway</title>
 </head>
+
 <body>
+  <div class="opening">
+    <img src="./splitImage/hausenncamp/logo_1.png" alt="logoooooo">
+  </div>
   <div class="contacts">
     <img src="./splitImage/kerway/turtle.jpg" alt="cat">
   </div>
@@ -29,7 +35,7 @@
         <ul class="camp_items">
           <li class="camp_item">
             <div class="camp_item_top">
-              <a href="##">
+              <a href="./hausenn.html">
                 <img src="./splitImage/hausenn/hausenn.png" alt="hausenn">
               </a>
             </div>
@@ -96,26 +102,26 @@
       </li>
     </ul>
   </nav>
-  <section id="home">
-    <div class="bg"></div>
-    <div class="home_assets">
-      <div class="logo">
-        <img src="./splitImage/kerway/header_photo_foreground.png" alt="logo" />
+
+  <div class="kerway_banner_parallax_group parallax">
+    <section id="home" class="scrollify" data-section-name="homePage">
+      <div class="bg"></div>
+      <div class="home_assets">
+        <div class="logo">
+          <img src="./splitImage/kerway/header_photo_foreground.png" alt="logo" />
+        </div>
+        <div class="down_arrow">
+          <img src="./splitImage/hausenn/arrow.png" alt="">
+        </div>
       </div>
-      <div class="down_arrow">
-        <img src="./splitImage/hausenn/arrow.png" alt="">
-      </div>
-    </div>
-  </section>
-  <section id="banner">
-    <div class="kerway_banner_parallax_group parallax">
-      <!-- <div class="baseline"></div> -->
+    </section>
+    <section id="banner" class="scrollify" data-section-name="bannerPage">
       <div class="banner_title">
         <img src="./splitImage/kerway/banner_title.png" alt="">
       </div>
       <div class="main_banner parallax_group">
         <div class="main_banner_image layer__base">
-          <img src="./splitImage/kerway/banner_img1.png" alt="">
+          <img class="animated fadeOut" src="./splitImage/kerway/banner_img1.png" alt="">
         </div>
         <div class="main_banner_title layer__text">
           從日常<br>實現藝術<br>從藝術<br>反思生活
@@ -134,7 +140,7 @@
             將素人大眾<br>與高端時尚的<br>界限拉近。
           </div>
           <div class="actor_introduction_narrative_line layer__top"> </div>
-  
+
           <div class="actor_introduction_narrative_detail layer__base">
             「可畏工作」從平面攝影起手，將彩妝造型，動態影像，服飾設計以及平面設計等美學專業領域連結、揉和並重塑，皆由顛覆傳統婚紗照以 「取得邏輯」的市場常態，發展成跨領域的「製成邏輯」全新創作團隊。<br>將素人大眾與高端時尚的界限不斷拉近，借此完成人對自我展現的各種「夢想」。
           </div>
@@ -145,170 +151,273 @@
           </div>
           <div class="actor_introduction_image_actor2 layer__text">
             <img src="./splitImage/kerway/banner_img42.png" alt="">
-  
+
           </div>
           <div class="actor_introduction_image_actor3 layer__base">
             <img src="./splitImage/kerway/banner_img43.png" alt="">
           </div>
         </div>
       </div>
-    </div>
-  </section>
-<!-- kerway_works-->
-	<section id="kerway_works_page">
-		<div class="works_main_content container">
-			<!-- <div id="hambuger">
-				<div class="line line_left"></div>
-				<div class="line line_right"></div>
-			</div> -->
-			<div class="kerway-logo">
-				<img src="./splitImage/kerway/logo_2.png" alt="kerway-logo">
-			</div>
-			<div class="works_title">
-				<div class="title_white_line"></div>
-				<h3>WORKS</h3>
-				<h4>作品</h4>
-			</div>
+    </section>
+    <section id="kerway_works_page" class="scrollify" data-section-name="worksPage">
+      <div class="works_main_content container">
+        <!-- <div id="hambuger">
+  				<div class="line line_left"></div>
+  				<div class="line line_right"></div>
+  			</div> -->
+        <div class="kerway-logo">
+          <img src="./splitImage/kerway/logo_2.png" alt="kerway-logo">
+        </div>
+        <div class="works_title">
+          <div class="title_white_line"></div>
+          <h3>WORKS</h3>
+          <h4>作品</h4>
+        </div>
 
-			<!-- masonry -->
-			<div id="works">	
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/Y4734miu.jpg" alt="">	
-				</div>
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/_MG_6715_mina.jpg" alt="">	
-				</div>
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/Y6184melody.jpg" alt="">	
-				</div>
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/Y2240mina.jpg" alt="">	
-				</div>
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/Y4734miu.jpg" alt="">	
-				</div>
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/Y6040melody.jpg" alt="">	
-				</div>
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/Y6078melody.jpg" alt="">	
-				</div>	    
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/Y2240mina.jpg" alt="">
-				</div>
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/_MG_2209_momo.jpg" alt="">	
-				</div>
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/_MG_2209_momo.jpg" alt="">
-				</div>
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/_MG_6841_1_melody.jpg" alt="">
-				</div>
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/Y2240mina.jpg" alt="">
-				</div>
-				<div class="item scale-animation all miu">
-					<img src="./splitImage/kerway/Y6078melody.jpg" alt="">	
-				</div>
-				<div class="item scale-animation animated-image all">
-					<img src="./splitImage/kerway/_MG_6841_1_melody.jpg" alt="">
-				</div>
-				<div class="item scale-animation animated-image all">
-					<img src="./splitImage/kerway/Y2240mina.jpg" alt="">
-				</div>
-				<div class="item scale-animation music_video all">
-					<img src="./splitImage/kerway/_MG_6841_1_melody.jpg" alt="">
-				</div>
-				<div class="item scale-animation all">
-					<img src="./splitImage/kerway/Y2240mina.jpg" alt="">
-				</div>
-				<div class="item scale-animation music_video all">
-					<img src="./splitImage/kerway/Y2240mina.jpg" alt="">
-				</div>
-				<div class="item scale-animation all dkai">
-					<img src="./splitImage/kerway/_MG_2209_momo.jpg" alt="">
-				</div>
-				<div class="item scale-animation music_video all">
-					<img src="./splitImage/kerway/_MG_2209_momo.jpg" alt="">
-				</div>
-			</div>
-		</div>
-		<div class="kerway_works_page_footer">
-			<div class="container">
-				<div class="footer_content">	
-					<div class="footer_logo_kerway">
-						<img src="./splitImage/kerway/banner_title.png" alt="footer_logo_kerway">
-					</div>
-					<p class="address">臺南市中西區開山路壹貳貳巷伍肆號</p>
-					<div class="contact">
-						<p class="email">HAUSENNCAMP.TW@GMAIL.COM</p>
-						<p class="phone">+886 6 225 5322</p>	
-					</div>
-					<p class="copyright_kerway">COPYRIGHT &copy; 2017 HAUSENNCAMP</p>
-				</div>
-			</div>	
-		</div>
+        <!-- masonry -->
+        <div id="works">
+          <a class="item scale-animation all lightbox" href="#img1" id="thumb1">
+            <img src="./splitImage/kerway/Y6078melody.jpg">
+          </a>
+          <div class="lightbox-target" id="img1">
+            <img src="./splitImage/kerway/Y6078melody.jpg">
+            <a class="lightbox-close" href="#thumb1"></a>
+          </div>
 
-		<!-- fliter bar -->
-		<div class="filter_bar">
-			<div class="filter_button" data-rel="all">
-				<div class="filter_grid">
-					<div class="small-box"></div>
-					<div class="small-box"></div>
-					<div class="small-box"></div>
-					<div class="small-box"></div>
-					<div class="small-box"></div>
-					<div class="small-box"></div>
-					<div class="small-box"></div>
-					<div class="small-box"></div>
-					<div class="small-box"></div>
-				</div>
-			</div>	
-			<div class="filter-menu">
-				<div id="project_items" class="filter_element">
-					<ul>
-						<li class="filter_element_title">工作項目</li>
-						<li class="filter_element_name" data-rel="animated-image">動態影像</li>
-						<li class="filter_element_name" data-rel="music_video">音樂錄影企劃</li>
-						<li class="filter_element_name">婚禮錄影</li>
-						<li class="filter_element_name">婚禮側錄</li>
-						<li class="filter_element_name">婚禮投影</li>
-						<li class="filter_element_name">靜態攝影</li>
-						<li class="filter_element_name">獨立婚紗</li>
-						<li class="filter_element_name">婚禮紀實</li>
-					</ul>
-				</div>
-				<div id="photographer" class="filter_element">
-					<ul>
-						<li class="filter_element_title">攝影師</li>
-						<li class="filter_element_name" data-rel="dkai">D-KAI</li>
-						<li class="filter_element_name">田中方堂</li>
-						<li class="filter_element_name">曼俐</li>
-						<li class="filter_element_name">杰楷</li>
-						<li class="filter_element_name">金堅</li>
-						<li class="filter_element_name">蔡洋</li>
-						<li class="filter_element_name">王孟</li>
-					</ul>
-				</div>
-				<div id="stylist" class="filter_element">
-					<ul>
-						<li class="filter_element_title">造型師</li>
-						<li class="filter_element_name" data-rel="miu">MIU</li>
-						<li class="filter_element_name">MELODY</li>
-						<li class="filter_element_name">NORA</li>
-					</ul>
-				</div>
-				<div class="arrow_box">
-					<a href="#kerway_works_page"><div class="arrow_line"></div></a>
-				</div>
-			</div>
-		</div>
-	</section>
-<script src="./script/hambuger.js"></script>
-<script src="./script/navbar.js"></script>
-<script src="./script/contactPage.js"></script>
-<script src="./script/home.js"></script>
-<script src="./script/kerway.js"></script>
+          <a class="item scale-animation all lightbox" href="#img2" id="thumb2">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+          </a>
+          <div class="lightbox-target" id="img2">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+            <a class="lightbox-close" href="#thumb2"></a>
+          </div>
+
+          <a class="item scale-animation all lightbox" href="#img3" id="thumb3">
+            <img src="./splitImage/kerway/Y4734miu.jpg">
+          </a>
+          <div class="lightbox-target" id="img3">
+            <img src="./splitImage/kerway/Y4734miu.jpg">
+            <a class="lightbox-close" href="#thumb3"></a>
+          </div>
+
+          <a class="item scale-animation all lightbox" href="#img4" id="thumb4">
+            <img src="./splitImage/kerway/_MG_6841_1_melody.jpg">
+          </a>
+          <div class="lightbox-target" id="img4">
+            <img src="./splitImage/kerway/_MG_6841_1_melody.jpg">
+            <a class="lightbox-close" href="#thumb4"></a>
+          </div>
+
+          <a class="item scale-animation all lightbox" href="#img5" id="thumb5">
+            <img src="./splitImage/kerway/Y4734miu.jpg">
+          </a>
+          <div class="lightbox-target" id="img5">
+            <img src="./splitImage/kerway/Y4734miu.jpg">
+            <a class="lightbox-close" href="#thumb5"></a>
+          </div>
+
+          <a class="item scale-animation all lightbox" href="#img6" id="thumb6">
+            <img src="./splitImage/kerway/Y6040melody.jpg">
+          </a>
+          <div class="lightbox-target" id="img6">
+            <img src="./splitImage/kerway/Y6040melody.jpg">
+            <a class="lightbox-close" href="#thumb6"></a>
+          </div>
+          <a class="item scale-animation all lightbox" href="#img7" id="thumb7">
+            <img src="./splitImage/kerway/Y6078melody.jpg">
+          </a>
+          <div class="lightbox-target" id="img7">
+            <img src="./splitImage/kerway/Y6078melody.jpg">
+            <a class="lightbox-close" href="#thumb7"></a>
+          </div>
+          <a class="item scale-animation all lightbox" href="#img8" id="thumb8">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+          </a>
+          <div class="lightbox-target" id="img8">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+            <a class="lightbox-close" href="#thumb8"></a>
+          </div>
+          <a class="item scale-animation all lightbox" href="#img9" id="thumb9">
+            <img src="./splitImage/kerway/_MG_2209_momo.jpg">
+          </a>
+          <div class="lightbox-target" id="img9">
+            <img src="./splitImage/kerway/_MG_2209_momo.jpg">
+            <a class="lightbox-close" href="#thumb9"></a>
+          </div>
+          <a class="item scale-animation all lightbox" href="#img10" id="thumb10">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+          </a>
+          <div class="lightbox-target" id="img10">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+            <a class="lightbox-close" href="#thumb10"></a>
+          </div>
+
+          <a class="item scale-animation all lightbox" href="#img11" id="thumb11">
+            <img src="./splitImage/kerway/_MG_6841_1_melody.jpg">
+          </a>
+          <div class="lightbox-target" id="img11">
+            <img src="./splitImage/kerway/_MG_6841_1_melody.jpg">
+            <a class="lightbox-close" href="#thumb11"></a>
+          </div>
+
+          <a class="item scale-animation all lightbox" href="#img12" id="thumb12">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+          </a>
+          <div class="lightbox-target" id="img12">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+            <a class="lightbox-close" href="#thumb12"></a>
+          </div>
+
+
+          <a class="item scale-animation all miu lightbox" href="#img13" id="thumb13">
+            <img src="./splitImage/kerway/Y6078melody.jpg">
+          </a>
+          <div class="lightbox-target" id="img13">
+            <img src="./splitImage/kerway/Y6078melody.jpg">
+            <a class="lightbox-close" href="#thumb13"></a>
+          </div>
+
+          <a class="item scale-animation animated-image all lightbox" href="#img14" id="thumb14">
+            <img src="./splitImage/kerway/_MG_6841_1_melody.jpg">
+          </a>
+          <div class="lightbox-target" id="img14">
+            <img src="./splitImage/kerway/_MG_6841_1_melody.jpg">
+            <a class="lightbox-close" href="#thumb14"></a>
+          </div>
+
+
+          <a class="item scale-animation animated-image all lightbox" href="#img15" id="thumb15">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+          </a>
+          <div class="lightbox-target" id="img15">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+            <a class="lightbox-close" href="#thumb15"></a>
+          </div>
+
+          <a class="item scale-animation music_video all lightbox" href="#img16" id="thumb16">
+            <img src="./splitImage/kerway/_MG_6841_1_melody.jpg">
+          </a>
+          <div class="lightbox-target" id="img16">
+            <img src="./splitImage/kerway/_MG_6841_1_melody.jpg">
+            <a class="lightbox-close" href="#thumb16"></a>
+          </div>
+
+          <a class="item scale-animation all lightbox" href="#img17" id="thumb17">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+          </a>
+          <div class="lightbox-target" id="img17">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+            <a class="lightbox-close" href="#thumb17"></a>
+          </div>
+
+          <a class="item scale-animation music_video all lightbox" href="#img18" id="thumb18">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+          </a>
+          <div class="lightbox-target" id="img18">
+            <img src="./splitImage/kerway/Y2240mina.jpg">
+            <a class="lightbox-close" href="#thumb18"></a>
+          </div>
+
+          <a class="item scale-animation all dkai lightbox" href="#img19" id="thumb19">
+            <img src="./splitImage/kerway/_MG_2209_momo.jpg">
+          </a>
+          <div class="lightbox-target" id="img19">
+            <img src="./splitImage/kerway/_MG_2209_momo.jpg">
+            <a class="lightbox-close" href="#thumb19"></a>
+          </div>
+
+          <a class="item scale-animation music_video all lightbox" href="#img20" id="thumb20">
+            <img src="./splitImage/kerway/_MG_2209_momo.jpg">
+          </a>
+          <div class="lightbox-target" id="img19">
+            <img src="./splitImage/kerway/_MG_2209_momo.jpg">
+            <a class="lightbox-close" href="#thumb19"></a>
+          </div>
+        </div>
+        <!-- fliter bar -->
+        <div class="filter_bar">
+          <div class="filter_button" data-rel="all">
+            <div class="filter_grid">
+              <div class="small-box"></div>
+              <div class="small-box"></div>
+              <div class="small-box"></div>
+              <div class="small-box"></div>
+              <div class="small-box"></div>
+              <div class="small-box"></div>
+              <div class="small-box"></div>
+              <div class="small-box"></div>
+              <div class="small-box"></div>
+            </div>
+          </div>
+          <div class="filter-menu">
+            <div id="project_items" class="filter_element">
+              <ul>
+                <li class="filter_element_title">工作項目</li>
+                <li class="filter_element_name" data-rel="animated-image">動態影像</li>
+                <li class="filter_element_name" data-rel="music_video">音樂錄影企劃</li>
+                <li class="filter_element_name">婚禮錄影</li>
+                <li class="filter_element_name">婚禮側錄</li>
+                <li class="filter_element_name">婚禮投影</li>
+                <li class="filter_element_name">靜態攝影</li>
+                <li class="filter_element_name">獨立婚紗</li>
+                <li class="filter_element_name">婚禮紀實</li>
+              </ul>
+            </div>
+            <div id="photographer" class="filter_element">
+              <ul>
+                <li class="filter_element_title">攝影師</li>
+                <li class="filter_element_name" data-rel="dkai">D-KAI</li>
+                <li class="filter_element_name">田中方堂</li>
+                <li class="filter_element_name">曼俐</li>
+                <li class="filter_element_name">杰楷</li>
+                <li class="filter_element_name">金堅</li>
+                <li class="filter_element_name">蔡洋</li>
+                <li class="filter_element_name">王孟</li>
+              </ul>
+            </div>
+            <div id="stylist" class="filter_element">
+              <ul>
+                <li class="filter_element_title">造型師</li>
+                <li class="filter_element_name" data-rel="miu">MIU</li>
+                <li class="filter_element_name">MELODY</li>
+                <li class="filter_element_name">NORA</li>
+              </ul>
+            </div>
+            <div class="arrow_box">
+              <a href="#kerway_works_page">
+                <div class="arrow_line"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kerway_works_page_footer">
+        <div class="container">
+          <div class="footer_content">
+            <div class="footer_logo_kerway">
+              <img src="./splitImage/kerway/banner_title.png" alt="footer_logo_kerway">
+            </div>
+            <p class="address">臺南市中西區開山路壹貳貳巷伍肆號</p>
+            <div class="contact">
+              <p class="email">HAUSENNCAMP.TW@GMAIL.COM</p>
+              <p class="phone">+886 6 225 5322</p>
+            </div>
+            <p class="copyright_kerway">COPYRIGHT &copy; 2017 HAUSENNCAMP</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- kerway_works-->
+  <script src="./script/opening.js"></script>
+  <script src="./script/hambuger.js"></script>
+  <script src="./script/navbar.js"></script>
+  <script src="./script/contactPage.js"></script>
+  <script src="./script/home.js"></script>
+  <script src="./script/kerway.js"></script>
+  <script src="./script/jquery.scrollify.js"></script>
+  <script src="./script/pageScroll.js"></script>
 </body>
+
 </html>

@@ -114,7 +114,7 @@ button {
 
 /*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
 並且使用我上面設立的變數來調動media queries的width*/
-@-webkit-keyframes bounce {
+@-webkit-keyframes jump {
   0% {
     -webkit-transform: translateY(0);
     transform: translateY(0); }
@@ -124,7 +124,7 @@ button {
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0); } }
-@keyframes bounce {
+@keyframes jump {
   0% {
     -webkit-transform: translateY(0);
     transform: translateY(0); }
@@ -258,8 +258,8 @@ button {
   height: 34px; }
   .down_arrow img {
     width: 100%;
-    -webkit-animation-name: bounce;
-    animation-name: bounce;
+    -webkit-animation-name: jump;
+    animation-name: jump;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
@@ -422,7 +422,11 @@ nav {
   transition: -webkit-transform .3s ease-in;
   -o-transition: transform .3s ease-in;
   transition: transform .3s ease-in;
-  transition: transform .3s ease-in, -webkit-transform .3s ease-in; }
+  transition: transform .3s ease-in, -webkit-transform .3s ease-in;
+  padding: 0 100px; }
+  @media all and (max-width: 479px) {
+    #banner {
+      padding: 0 30px; } }
 
 .baseline {
   position: absolute;
@@ -438,7 +442,6 @@ nav {
   background-color: black; }
 
 .parallax {
-  padding: 0 100px;
   -webkit-perspective: 5px;
   perspective: 5px;
   -moz-perspective: 5px;
@@ -447,9 +450,6 @@ nav {
   overflow-y: auto;
   -webkit-perspective-origin-x: 50%;
   perspective-origin-x: 50%; }
-  @media all and (max-width: 479px) {
-    .parallax {
-      padding: 0 30px; } }
   .parallax::-webkit-scrollbar {
     width: 0; }
 
@@ -790,7 +790,12 @@ form {
 並且使用我上面設立的變數來調動media queries的width*/
 #kerway_works_page {
   background-color: #000;
-  position: relative; }
+  position: relative;
+  -webkit-transition: -webkit-transform .3s ease-in;
+  transition: -webkit-transform .3s ease-in;
+  -o-transition: transform .3s ease-in;
+  transition: transform .3s ease-in;
+  transition: transform .3s ease-in, -webkit-transform .3s ease-in; }
   #kerway_works_page .works_main_content {
     padding-top: 50px;
     margin: 0 auto; }
@@ -854,18 +859,6 @@ form {
       .works_title h4 {
         font-size: 20px;
         letter-spacing: 3px; } }
-
-#hambuger {
-  position: fixed;
-  width: 39px;
-  height: 19px;
-  top: 50px;
-  left: 50px;
-  z-index: 2;
-  cursor: pointer; }
-  @media all and (max-width: 480px) {
-    #hambuger {
-      left: 15px; } }
 
 #hambuger > .line {
   position: absolute;
@@ -982,6 +975,60 @@ form {
   border: 0;
   padding: 0; }
 
+.lightbox-target {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden; }
+
+.lightbox-target img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 0%;
+  max-width: 0%;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -webkit-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
+
+a.lightbox-close {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
+
+.lightbox-target:target {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  z-index: 1; }
+
+.lightbox-target:target img {
+  max-height: 100%;
+  max-width: 100% !important; }
+
+.lightbox-target:target a.lightbox-close {
+  top: 0px; }
+
 .kerway_works_page_footer {
   background-color: #fff;
   display: -webkit-box;
@@ -1042,7 +1089,8 @@ form {
 
 .filter_bar {
   background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -1056,7 +1104,8 @@ form {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  overflow: hidden; }
   @media all and (max-width: 768px) {
     .filter_bar {
       display: none; } }
@@ -1175,3 +1224,49 @@ form {
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg); }
+
+@-webkit-keyframes pop {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes pop {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.opening {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .opening img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    -webkit-animation-name: pop;
+    animation-name: pop;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+
+.opening ~ * {
+  visibility: hidden; }

@@ -16,6 +16,10 @@
 
 #banner {
   transition: transform .3s ease-in;
+  padding: 0 100px;
+  @include phone-width {
+    padding: 0 30px;
+  }
 }
 
 .baseline {
@@ -34,10 +38,7 @@
 }
 
 .parallax {
-  padding: 0 100px;
-  @include phone-width {
-    padding: 0 30px;
-  }
+  
   perspective: 5px;
   -moz-perspective: 5px;
   height: 100vh;

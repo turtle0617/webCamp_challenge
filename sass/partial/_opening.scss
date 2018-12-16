@@ -1,0 +1,31 @@
+@keyframes pop {
+  0% {opacity: 1};
+  50% {opacity: 0};
+  100% {opacity: 1};
+}
+
+.opening {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-image: url('../splitImage/hausenncamp/logo_1.png');
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  img {
+    filter: invert(100%);
+    animation-name: pop;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.opening ~ * {
+  visibility: hidden;
+}
