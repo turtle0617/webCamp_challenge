@@ -207,25 +207,27 @@
 //lightbox
 
 .lightbox-target {
+	display: none;
   position: fixed;
+	width: 100vw;
+	height: 100vh;
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  opacity: 0;
+  opacity: 1;
   transition: opacity .5s ease-in-out;
   overflow: hidden;
+	z-index: 100;
 }
 
 .lightbox-target img {
+	width: 100%;
   margin: auto;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  max-height: 0%;
-  max-width: 0%;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   transition: .5s ease-in-out;
 }
@@ -242,17 +244,17 @@ a.lightbox-close {
   transition: .5s ease-in-out;
 }
 
-.lightbox-target:target {
-  opacity: 1;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-}
+// .lightbox-target:target {
+//   opacity: 1;
+//   top: 0;
+//   bottom: 0;
+//   z-index: 1;
+// }
 
-.lightbox-target:target img {
-  max-height: 100%;
-  max-width: 100% !important;
-}
+// .lightbox-target:target img {
+//   max-height: 100%;
+//   max-width: 100% !important;
+// }
 
 .lightbox-target:target a.lightbox-close {
   top: 0px;
@@ -262,6 +264,7 @@ a.lightbox-close {
 
 //FOOTER-------------------------------------------------
 .kerway_works_page_footer{
+	position: relative;
 	background-color: #fff;
 	display: flex;
 	padding-top: 75px;
@@ -318,7 +321,6 @@ a.lightbox-close {
 		@include media_mobile{
 			height: 23px;
 			width: auto;
-
 			}
 		}
 	}
@@ -347,7 +349,6 @@ a.lightbox-close {
 	font-weight: 100;
 	display: flex;
 	justify-content: space-between;
-	overflow: hidden;
 
 	@include media_ipad_max{
 		display: none;
@@ -363,8 +364,6 @@ a.lightbox-close {
 			grid-gap: 2px;
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(3, 1fr);
-
-
 
 			.small-box{
 			  height: 8px;
@@ -392,17 +391,18 @@ a.lightbox-close {
 				&:hover{
 				background: #a5a1a1;
 				}
-
 			}
-
 			.filter_element_title{
 				color: white;
 				padding-top: 10px;
 				padding-bottom: 10px;
 			}
+			
 		}
 	}
 }
+
+
 
 #project_items{
 	position: absolute;
